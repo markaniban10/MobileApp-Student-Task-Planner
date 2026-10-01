@@ -3,8 +3,13 @@ import { View, Text, TouchableOpacity, FlatList } from 'react-native';
 import { styles } from './globalStyles';
 
 export default function HomeScreen({ navigation }) {
-  const [tasks, setTasks] = useState([]);
-  const [nextId, setNextId] = useState(1);
+  const [tasks, setTasks] = useState([
+  { id: '1', title: 'Quiz in Cs302', subject: 'Cs302', deadline: '2026-10-05', done: false },
+  { id: '2', title: 'Submission of MCO in Cs302', subject: 'Cs302', deadline: '2026-10-09', done: false },
+  { id: '3', title: 'Exam in Cs303', subject: 'Cs303', deadline: '2026-10-15', done: false },
+  { id: '4', title: 'Defense in Cs303', subject: 'Cs303', deadline: '2026-10-20', done: false },
+]);
+const [nextId, setNextId] = useState(5);
   const [filter, setFilter] = useState('All');
 
   // Open the form to add a new task
